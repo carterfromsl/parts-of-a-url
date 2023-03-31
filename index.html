@@ -140,5 +140,45 @@
   </div>
 
 </article>
+  
+  <script>
+    function setInfo() {
+  var data = document.querySelectorAll('[data-type]');
+  
+  var i = data.length;
+  for (i = 0; i < data.length; i++) {
+  let dataType = data[i].getAttribute('data-type');
+  data[i].setAttribute("onclick","showInfo('" + dataType + "');");
+  }
+}
+
+setInfo(); 
+
+function showInfo(n) {
+  var info = document.querySelectorAll('[data-info]');
+  var data = document.querySelectorAll('[data-type]');
+  var activeInfo = document.getElementById(n);
+  var activeData = document.querySelectorAll('[data-type="' + n + '"]');
+  
+  var a = info.length;
+  for (a = 0; a < info.length; a++) {
+  info[a].classList.remove('active');
+  }
+  
+  var i = data.length;
+  for (i = 0; i < data.length; i++) {
+  data[i].classList.remove('active');
+  }
+  
+  var e = activeData.length;
+  for (e = 0; e < activeData.length; e++) {
+  activeData[e].classList.add('active');
+  }
+    
+  activeInfo.classList.add('active');
+  
+  event.preventDefault()
+}
+  </script>
 </body>
 </html>
