@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Parts of a URL | LLXI.me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,600;1,300;1,600&display=swap');*{box-sizing:border-box;scrollbar-color:#aaa #000}::selection{background:#ff0;color:#000}body::-webkit-scrollbar-track{background:#000}body::-webkit-scrollbar-thumb{background-color:#aaa;border-radius:0;border:3px solid #000}body{margin:0;display:block;background:#111;min-height:100vh;width:100%;padding:20px;overflow-x:hidden;position:relative;color:#fff;font-family:'Roboto Mono',monospace}.green{color:#00b111}.blue{color:#004cb2}.brown{color:#b26f00}.pink{color:#b000b1}.urlbox{display:block;position:relative;background:#222;margin:auto;width:100%;max-width:max-content;border-radius:3px;border:1px solid #333}.urlbox pre{user-select:none}.urlbox header{display:block;background:#f2f2f2;width:100%}.urlbox>div{display:none;padding:0 20px 20px;max-width:900px}.urlbox>div.active{display:block}.urlbox>h1{margin:0;padding:20px 20px 0;font-weight:400;font-size:24px}.urlbox>h3{padding:10px 20px 20px;font-size:1em;line-height:1.5em;margin:0}.urlbox p{line-height:1.5em;margin:15px 0;text-align:justify}
+.urlbox>div b{color:#00b111}.urlbox>div b:hover{cursor:pointer;text-decoration:wavy underline;color:#ff0}.pre{font-size:20px;color:#111;background:#f2f2f2;margin:auto;padding:2em 1em;font-weight:700;width:100%;white-space:pre;overflow-x:auto;cursor:default;font-family:'Roboto Mono',monospace}.pre a{text-decoration:none}.pre a:focus{box-shadow:0 0 0 2px}.pre a:hover{text-decoration:underline wavy}.pre i,.pre em{font-weight:400;font-style:normal;cursor:text;display:inline-block}.pre i.active,.pre em.active,.pre span.active{background:#ff0;box-shadow:0 0 0 2px #ff0,3px 4px 0 2px #000;position:relative}.pre i:hover{font-weight:700;text-decoration:underline wavy}.pre a.active{outline:2px solid;padding:0 4px;margin:0 -4px}.pre p{margin:0}.pre .reset{color:inherit;opacity:.5}.pre .reset.active{display:none}kbd{border:1px solid #444;padding:2px 4px;border-radius:2px;background:#000}
+  </style>
+</head>
+
+<body>
+<article class="urlbox">
+  <h1>://Parts.of.a.URL/</h1>
+  <h3>A resource for understanding what the different parts of a URL are and what they do.</h3>
+  <header>
+    <pre class="pre">                                          <a href="#parameter" class="green" data-type="parameter">parameter</a>                <a class="reset active" href="#intro" data-type="intro">clear</a>
+                                          <span class="green">┌───┴──┐</span>
+  <a href="#subdomain" class="blue" data-type="subdomain">subdomain</a> <a href="#domain" class="green" title="Second-Level Domain" data-type="domain">domain</a>  <a href="#tld" class="brown" title="Top-Level Domain" data-type="tld">TLD</a>  <a href="#subdirectory" class="pink" data-type="subdirectory">subdirectory</a>    <a href="#key" class="blue" data-type="key">key</a>   <a href="#value" class="brown" data-type="value">value</a>
+        <span class="blue">┌┴┐</span> <span class="green">┌──┴──┐</span> <span class="brown">┌┴┐</span> <span class="pink">┌─┴─┐ ┌─┴─────┐</span>  <span class="blue">┌┴┐</span> <span class="brown">┌───┴────┐</span>
+<span><i data-type="scheme">https</i><em><i data-type="separator">://</i></em><em data-type="host"><i data-type="subdomain">www</i>.<i data-type="domain">example</i>.<i data-type="tld">com</i></em><em data-type="path">/<i data-type="subdirectory">forum</i>/<i data-type="subdirectory">questions</i>/</em><em data-type="query">?<span data-type="parameter"><i data-type="key">tag</i>=<i data-type="value">networking</i></span>&amp;<span data-type="parameter"><i data-type="key">order</i>=<i data-type="value">newest</i></span></em><i data-type="fragment">#top</i></span>
+<span class="brown">└─┬─┘</span>   <span class="pink">└─────┬───────┘</span><span class="blue">└───────┬───────┘</span><span class="green">└────────────┬─────────────┘</span><span class="pink">└┬─┘</span>
+<a href="#scheme" class="brown" data-type="scheme">scheme</a>       <a href="#host" class="pink" data-type="host">host</a>            <a href="#path" class="blue" data-type="path">path</a>              <a href="#query" class="green" data-type="query">query string</a>     <a href="#fragment" class="pink" data-type="fragment">fragment</a> 
+ </pre>
+  </header>
+  
+  <div id="intro" class="active" data-info="part">
+    <p>Click the labels in the diagram above to learn about the different parts of a URL.</p>
+  </div>
+
+  <div id="scheme" data-info="part">
+    <h2>Scheme</h2>
+    <p>The scheme tells web servers which protocol to use when it accesses a page on your website.</p>
+
+    <p>Before the invention of SSL (<em>Secure Socket Layer</em>) technology, websites were served over the unencrypted HTTP protocol. Nowadays, HTTPS — which stands for <em>Hypertext Transfer Protocol Secure</em> — is the most common scheme.  It tells your web browser to encrypt any information you enter onto the page, like your passwords or credit card information, so cybercriminals can’t access it. This security protocol protects your website visitors and implementing it will help your site rank better on Google. That's why implementing SSL is a must-do on any technical SEO guide.</p>
+
+    <p>Other schemes you might see are <kbd>mailto:</kbd>, which can open your computer’s default email service provider to help you draft an email to the email address you entered in the URL, <kbd>tel:</kbd> which tells the device to dial the provided phone number if it has the ability to do so, and <kbd>ftp:</kbd>, which is a standard protocol for transferring computer files between a client and server on a computer network.</p>
+  </div>
+  
+  <div id="host" data-info="part">
+    <h2>Host</h2>
+    <p>The "host" is a part of a Uniform Resource Locator (URL) that identifies the domain name or IP address of the server that hosts the resource being requested. In other words, it is the network location of the website or web page that is being accessed.</p>
+
+    <p>For example, in the URL "<strong>https://www.example.com/index.html</strong>", the host is "<strong>www.example.com</strong>". It identifies the server that is hosting the website or web page that the user wants to access.</p>
+
+<p>The host component of a URL is important because it helps web browsers and servers to locate and retrieve the requested resource from the appropriate server on the internet. Without the host information, the URL would not be able to identify the server hosting the resource, and the user would not be able to access the website or web page.</p>
+  </div>
+  
+  <div id="subdomain" data-info="part">
+    <h2>Subdomain</h2>
+    <p>A subdomain is a part of a domain name in a URL that is located to the left of the main domain name and separated by a dot. In other words, it is a subcategory or subdivision of a larger domain name.</p>
+
+      <p>For example, in the URL "<strong>https://blog.example.com/</strong>", "<strong>blog</strong>" is the subdomain of the domain name "example.com". The subdomain "blog" indicates that the content being accessed is hosted on a separate server or section of the main website, and may contain different content or functionality from the main domain.</p>
+
+<p>Subdomains are commonly used to organize content or services within a website, especially for large organizations or businesses that have multiple departments or offerings. They can also be used to provide access to specific content, such as language or country-specific versions of a website.</p>
+
+<p>Subdomains can be created by the domain owner through the domain name registrar or web hosting provider. They can be assigned their own IP address or use the same IP address as the main domain, depending on the hosting configuration.</p>
+  </div>
+  
+  <div id="domain" data-info="part">
+    <h2>Second-Level Domain</h2>
+    <p>The second-level domain (SLD) - often shortened to just "<strong>Domain</strong>" - is the name of a website. It helps people know they’re visiting a certain brand’s site.</p>
+    <p>For instance, people who visit “<strong>mlb.com</strong>” know they’re on Major League Baseball’s website, without needing any more information.</p>
+  </div>
+  
+  <div id="tld" data-info="part">
+    <h2>Top-Level Domain</h2>
+    <p>The top-level domain (TLD) is intended to specify what type of entity your organization registers as on the internet.</p>
+
+<p>For example, “.com” is intended for commercial entities, so a lot of businesses register with a top-level domain of “.com”. Similarly “.edu” is intended for academic institutions, so a lot of colleges and universities register with a top-level domain of “.edu”.</p>
+  </div>
+  
+  <div id="subdirectory" data-info="part">
+    <h2>Subdirectory</h2>
+    <p>A subdirectory — also known as a subfolder — helps people as well as web crawlers understand which particular section of a webpage they’re on.</p>
+
+<p>For instance, if you own an online store that sells t-shirts, hats, and mugs, one of your website’s URLs could look like <em>“https://shop.yourstore.com/hats”</em>. Notice that the <b data-type="subdomain">subdomain</b> is “shop” and the subdirectory is “hats." That means this URL would serve up the “Hats” page, which is a subfolder of the “Shop” page. T-shirts and mugs would be other subfolders of this page.</p>
+  </div>
+  
+  <div id="query" data-info="part">
+    <h2>Query String</h2>
+    <p>A query string is an optional URL component preceded by a question mark <kbd>(?)</kbd>, containing a string of non-hierarchical data passed to the server. These parameters are used to specify additional instructions or data for the server to process, such as search queries or user preferences.</p>
+    <p>Its syntax is not well defined, but by convention is most often a sequence of one or more attribute–value pairs (known as <b data-type="parameter">Parameters</b>) separated by a delimiter.</p>
+        
+   <p>* <em><a href="https://stackoverflow.com/questions/13373504/what-is-a-valid-url-query-string" target="_blank"><b>Visit this Stack Overflow post to learn more.</b></a></em></p>
+  </div>
+  
+  <div id="parameter" data-info="part">
+    <h2>Query Parameter</h2>
+    <p>A Parameter is a single query in a <b data-type="query">Query String</b>, consisting of a <b data-type="key">Key</b> and a <b data-type="value">Value</b>.</p>
+  </div>
+  
+  <div id="key" data-info="part">
+    <h2>Parameter Key</h2>
+    <p>A Key - also known as an Attribute - is the unique identifier for a <b data-type="parameter">Query Parameter</b>. It is assigned to a specific <b data-type="value">Value</b>, separated by an equals sign (<kbd>=</kbd>), in order to provide additional information or instructions to the server.</p>
+    
+    <p>For example, in the URL "<strong>https://www.example.com/search?q=apple</strong>", the key is "q", which stands for "query". The value assigned to the key is "apple", which is the search term being requested by the user. The server can then use this information to return search results for the specified query.</p>
+
+<p>Keys are commonly used in URLs to pass data between the client (web browser) and the server. They can also be used to specify options, settings, or preferences for the resource being requested, such as language, date format, or user ID.</p>
+
+<p>Multiple key-value pairs can be included in a URL parameter by separating them with an ampersand (<kbd>&</kbd>). For example, in the URL "<strong>https://www.example.com/search?q=apple&lang=en</strong>", there are two key-value pairs: "q=apple" and "lang=en".</p>
+  </div>
+  
+  <div id="value" data-info="part">
+    <h2>Parameter Value</h2>
+    <p>See: <b data-type="key">Parameter Key</b></p>
+  </div>
+  
+  <div id="path" data-info="part">
+    <h2>Path</h2>
+        <p>A path is a component of a URL that comes after the domain and any subdomain(s), and specifies the location of a specific resource on the server. It can include one or more segments separated by slashes ("/"), with each segment representing a subdirectory or file within the website's directory structure.</p>
+
+    <p>For example, in the URL "<strong>https://www.example.com/products/software/index.html</strong>", the path is "<strong>/products/software/index.html</strong>". This specifies the directory path to the specific resource, which in this case is a web page called "index.html" located in the "software" subdirectory within the "products" directory on the server.</p>
+
+<p>Paths are important because they allow web browsers to locate and retrieve the specific resource being requested by the user. The path component can include file extensions such as .html, .php, .css, .jpg, and others, depending on the type of resource being requested.</p>
+  </div>
+  
+  <div id="fragment" data-info="part">
+    <h2>Fragment</h2>
+    <p>The optional fragment component is preceded by a hash <kbd>(#)</kbd>.</p>
+    
+    <p>The fragment contains a fragment identifier providing direction to a secondary resource, such as a section heading in an article identified by the remainder of the URI. When the primary resource is an HTML document, the fragment is often an ID attribute of a specific element, and web browsers will scroll this element into view. The element with the ID is known as the "Anchor" when used in this way.</p>
+  </div>
+  
+  <div id="separator" data-info="part">
+    <h2>Separator</h2>
+    <p>The "<strong>://</strong>" after the URL scheme is a separator that indicates the beginning of the network location portion of the URL. It is a required delimiter between the scheme and the hostname or IP address.</p>
+
+    <p>For example, in the URL "<strong>https://www.example.com/index.html</strong>", "https" is the URL scheme, and "www.example.com" is the network location. The "://" separator indicates that the network location information is about to follow, and allows the web browser to properly parse and interpret the URL.</p>
+    
+    <blockquote>
+      <p><strong>"It seemed like a good idea at the time,"</strong></p>
+      <p>Tim Berners-Lee, the creator of the Web’s bedrock software standards admitted that when he devised the web, he had no idea that the forward slashes in every web address would cause "so much hassle". </p>
+      
+      <p><q>Typing in // has just resulted in people overusing their index fingers, wasting time and using more paper[...] It's pretty pointless.</q></p>
+    
+      </blockquote>
+  </div>
+
+</article>
+</body>
+</html>
